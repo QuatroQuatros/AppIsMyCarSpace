@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context=".Principal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+
+        <dev.jahidhasanco.seatbookview.SeatBookView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/layoutSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:seat_gaping="10dp"
+            app:seat_text_size="15sp"
+            app:available_seats_text_color="#59575C"
+            app:seat_select_limit="2"
+            />
+
+    </ScrollView>
+
+
+
+</LinearLayout>
