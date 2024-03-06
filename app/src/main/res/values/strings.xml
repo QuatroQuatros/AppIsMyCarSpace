@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">buscarVagas</string>
+    <string name="tela_de_vagas_do_estacionamento">tela de vagas do estacionamento</string>
 </resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ParkingActivity">
+
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/entrada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrada" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tela_de_vagas_do_estacionamento"
+            android:scrollbars="vertical"
+            tools:ignore="UselessParent">
+
+            <dev.jahidhasanco.seatbookview.SeatBookView
+                android:id="@+id/layoutSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:available_seats_text_color="#59575C"
+                app:seat_gaping="10dp"
+                app:seat_select_limit="1"
+                app:seat_text_size="15sp" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/saida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saida" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Legenda" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="307dp"
+            android:layout_height="100dp"
+            android:background="#ECECEC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vagaslivres"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="vagas Livres"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/vagaspreferenciais"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="preferencial"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vagaslivres" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="vagas ocupadas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vagaspreferenciais" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </android.widget.LinearLayout>
+
+
+</LinearLayout>
