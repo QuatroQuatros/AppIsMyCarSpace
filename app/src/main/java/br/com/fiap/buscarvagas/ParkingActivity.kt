@@ -1,14 +1,17 @@
 package br.com.fiap.buscarvagas
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.core.view.setPadding
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import dev.jahidhasanco.seatbookview.SeatBookView
 import dev.jahidhasanco.seatbookview.SeatClickListener
 import dev.jahidhasanco.seatbookview.SeatLongClickListener
+
 
 class ParkingActivity : ComponentActivity() {
 
@@ -84,6 +87,11 @@ class ParkingActivity : ComponentActivity() {
 
             }
         })
+    }
+
+    fun goBackToHome(view: View?) {
+        val intent: Intent = Intent(this, MainActivity::class.java)
+        ContextCompat.startActivity(this, intent, null)
     }
 }
 
