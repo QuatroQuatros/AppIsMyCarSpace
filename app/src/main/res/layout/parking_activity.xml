@@ -18,16 +18,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <ImageButton
                 android:id="@+id/backButton"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="?android:attr/actionModeCloseDrawable"
-                tools:src="?android:attr/actionModeCloseDrawable"
                 android:background="@null"
+                android:contentDescription="TODO"
                 android:onClick="goBackToHome"
-                android:contentDescription="TODO" />
+                android:src="?android:attr/actionModeCloseDrawable"
+                tools:src="?android:attr/actionModeCloseDrawable" />
 
             <TextView
                 android:id="@+id/entrada"
@@ -36,8 +35,6 @@
                 android:layout_marginEnd="28dp"
                 android:gravity="end|center"
                 android:text="Entrada" />
-
-
         </LinearLayout>
 
 
@@ -69,44 +66,71 @@
             android:layout_height="wrap_content"
             android:text="Saida" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Legenda" />
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="307dp"
-            android:layout_height="100dp"
-            android:background="#ECECEC"
+        <android.widget.LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/vagaslivres"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="vagas Livres"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/vagaspreferenciais"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="preferencial"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/vagaslivres" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="vagas ocupadas"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/vagaspreferenciais" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="wrap_content"
+                android:text="Legenda" />
 
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="307dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#ECECEC"
+                android:orientation="vertical"
+                android:padding="14dp">
 
+
+                <TextView
+                    android:id="@+id/vagaslivres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#5EC762"
+                    android:gravity="center"
+                    android:text="vagas livres"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"  />
+
+                <TextView
+                    android:id="@+id/vagaspreferenciais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#4284E7"
+                    android:gravity="center"
+                    android:text="preferencial"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vagaslivres" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#FF4242"
+                    android:gravity="center"
+                    android:text="vagas ocupadas"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vagaspreferenciais" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </android.widget.LinearLayout>
 
     </android.widget.LinearLayout>
 
