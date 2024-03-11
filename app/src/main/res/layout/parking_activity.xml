@@ -28,15 +28,24 @@
                 android:src="?android:attr/actionModeCloseDrawable"
                 tools:src="?android:attr/actionModeCloseDrawable" />
 
-            <TextView
-                android:id="@+id/entrada"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_marginEnd="28dp"
-                android:gravity="end|center"
-                android:text="Entrada" />
+
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="28dp"
+            android:gravity="end|center"
+            android:text="Entrada"
+            android:layout_marginStart="40dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -59,12 +68,15 @@
                 app:seat_text_size="15sp" />
 
         </ScrollView>
+    </LinearLayout>
 
         <TextView
             android:id="@+id/saida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Saida" />
+            android:text="Saida"
+            android:layout_marginEnd="50dp"
+            android:gravity="end"/>
 
         <Space
             android:layout_width="12dp"
@@ -79,7 +91,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Legenda" />
+                android:text="Legenda"
+                android:textColor="#E56000"
+                android:textStyle="bold"
+                android:layout_marginBottom="1dp"/>
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
