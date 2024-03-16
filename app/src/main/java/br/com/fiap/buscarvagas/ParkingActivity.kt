@@ -47,11 +47,8 @@ class ParkingActivity : ComponentActivity() {
         seatBookView.setSeatsLayoutString(seats)
             .isCustomTitle(true)
             .setCustomTitle(title)
-            .setSeatLayoutPadding(2)
-            .setSeatSizeBySeatsColumnAndLayoutWidth(6, -1)
-        //ParentLayoutWeight -1 if Your seatBookView layout_width = match_parent / wrap_content
-
-
+            .setSeatLayoutPadding(12)
+            .setSeatSizeBySeatsColumnAndLayoutWidth(7, -1)
         seatBookView.show()
 
 
