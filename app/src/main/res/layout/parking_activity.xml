@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ParkingActivity">
+
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:onClick="goBackToHome"
+                android:src="?android:attr/actionModeCloseDrawable"
+                tools:src="?android:attr/actionModeCloseDrawable" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="28dp"
+            android:background="#5EC762"
+            android:gravity="end|center"
+            android:paddingHorizontal="8dp"
+            android:text="ENTRADA"
+            android:textColor="@color/white"
+            android:textFontWeight="500" />
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="475dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="8dp"
+            android:background="#B6B5B5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="17dp"
+            android:paddingBottom="-2dp"
+            android:paddingTop="4dp">
+
+
+            <dev.jahidhasanco.seatbookview.SeatBookView
+
+                android:id="@+id/layoutSeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                app:available_seat_background="@drawable/outline_green_car"
+                app:available_seats_text_color="#59575C"
+                app:booked_seat_background="@drawable/outline_red_car"
+                app:reserved_seat_background="@drawable/outline_blue_car"
+                app:seat_gaping="0dp"
+                app:seat_size="12dp"
+                app:seat_select_limit="1"
+                app:seat_text_size="0dp"
+                app:selected_seats_background="@drawable/black_outline_car_1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/saida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:background="#FF4242"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="4dp"
+            android:text="SAIDA"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+
+        <android.widget.LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="Legenda"
+                android:textColor="#E56000"
+                android:textStyle="bold" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="307dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#ECECEC"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+
+                <TextView
+                    android:id="@+id/vagaslivres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#5EC762"
+                    android:gravity="center"
+                    android:text="vagas livres"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/vagaspreferenciais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#4284E7"
+                    android:gravity="center"
+                    android:text="preferencial"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vagaslivres" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:drawableStart="@drawable/circle_shape"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="#FF4242"
+                    android:gravity="center"
+                    android:text="vagas ocupadas"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vagaspreferenciais" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </android.widget.LinearLayout>
+
+    </android.widget.LinearLayout>
+
+
+</LinearLayout>
